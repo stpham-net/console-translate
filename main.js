@@ -11,7 +11,6 @@ try {
       // Bật-Tắt tiện ích khi khởi động
       chrome.runtime.sendMessage("getExtensionStatus", function(response) {
         StphamTranslator.extensionStatus = (response == "true") ? true : false;
-        console.log("StphamTranslator.extensionStatus => ", StphamTranslator.extensionStatus); // DEBUG
       });
 
       // Bật-Tắt tiện ích khi bấm vào icon
