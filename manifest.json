@@ -1,0 +1,21 @@
+{
+   "background": {
+      "scripts": [ "background.js", "hot-reload.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Console Translate"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "api": [ "devtools", "tabs" ],
+      "explicit_host": [ "\u003Call_urls\u003E" ],
+      "js": [ "main.js" ],
+      "matches": [ "\u003Call_urls\u003E" ],
+      "scriptable_host": [ "http://*/*", "https://*/*" ]
+   } ],                                                                                                         
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://translate.google.com; object-src 'self'",
+   "manifest_version": 2,
+   "name": "Console Translate",
+   "version": "1.0"
+}
