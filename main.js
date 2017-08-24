@@ -1,6 +1,6 @@
 //'use strict';
 try {
-  var StphamTranslator = {
+  StphamTranslator = {
 
     extensionStatus: null,
     lastText: "",
@@ -10,12 +10,12 @@ try {
 
       // Bật-Tắt tiện ích khi khởi động
       chrome.runtime.sendMessage("getExtensionStatus", function(response) {
-        StphamTranslator.extensionStatus = (response == "true") ? true : false;
+        StphamTranslator.extensionStatus = (response === "true");
       });
 
       // Bật-Tắt tiện ích khi bấm vào icon
       chrome.runtime.onMessage.addListener(function (sendResponse) {
-        StphamTranslator.extensionStatus = (sendResponse == "true") ? true : false;
+        StphamTranslator.extensionStatus = (sendResponse === "true");
         console.log("StphamTranslator.extensionStatus => ", StphamTranslator.extensionStatus); // DEBUG
       });
 
@@ -47,10 +47,10 @@ try {
 
     // Thực hiện dịch
     translate(foreignText) {
-      var url = "https://translate.googleapis.com/translate_a/single";
-      var param = "sl=auto&tl=vi&dt=t&q=" + encodeURIComponent(foreignText);
-      var urlFull = url + "?client=gtx&" + param;
-      // Dịch bằng API của Google Translate
+        let url = "https://translate.googleapis.com/translate_a/single";
+        let param = "sl=auto&tl=vi&dt=t&q=" + encodeURIComponent(foreignText);
+        let urlFull = url + "?client=gtx&" + param;
+        // Dịch bằng API của Google Translate
       StphamTranslator.loadAjax(urlFull).then(function (response) {
         var responseText = "";
         for (i = 0; i < response[0].length; i++) {

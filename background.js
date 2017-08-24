@@ -1,6 +1,6 @@
 // Khởi tạo storage
 if (localStorage.getItem("extensionStatus") === null) {
-	localStorage.setItem("extensionStatus", "false");
+	localStorage.setItem("extensionStatus", "true");
 }
 
 // Bật-Tắt tiện ích khi khởi động
@@ -14,5 +14,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 chrome.browserAction.onClicked.addListener(function(tab) {
 	var extensionStatus = (localStorage.getItem("extensionStatus") == "true") ? "false" : "true";
 	chrome.tabs.sendMessage(tab.id, extensionStatus);
-	localStorage.setItem("extensionStatus", extensionStatus);
+  localStorage.setItem("extensionStatus", extensionStatus);
+  chrome.browserAction.setIcon({path:"icon_" + extensionStatus + ".png"});
 });
+
+// Tạo icon Bật-Tắt
+chrome.browserAction.setIcon({path:"icon_" + localStorage.getItem("extensionStatus") + ".png"});
