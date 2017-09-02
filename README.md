@@ -1,1 +1,1 @@
-# console-translate
+# translate-extension-chrome
