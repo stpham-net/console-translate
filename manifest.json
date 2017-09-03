@@ -16,7 +16,13 @@
   },
   "content_scripts": [
     {
+      "css": [
+        "jquery-ui.min.css",
+        "style.css"
+      ],
       "js": [
+        "jquery.min.js",
+        "jquery-ui.min.js",
         "main.js"
       ],
       "matches": [
@@ -31,5 +37,8 @@
   "browser_action": {
     "default_title": "Console Translate"
   },
-  "manifest_version": 2
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "images/*"
+  ]
 }
