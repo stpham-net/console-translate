@@ -3,8 +3,7 @@ try {
 
     extensionStatus : null,
     lastText        : "",
-    maxHeight       : "",
-    setPosition     : false,
+    isShow          : false,
 
     // Khởi tạo chương trình dịch
     init() {
@@ -32,11 +31,10 @@ try {
         // Kiểm tra bôi đen
         let selectionText = StphamTranslator.getSelectionText();
         if (selectionText !== "") {
-          let lastText = StphamTranslator.lastText;
           let foreignText = selectionText.replace(/^\s*/, "").replace(/\s*$/, "");
-          if (lastText !== foreignText) {
-            lastText = foreignText;
+          if (StphamTranslator.lastText !== foreignText) {
             StphamTranslator.translate(foreignText);
+            StphamTranslator.lastText = foreignText;
           }
         }
       }
@@ -53,13 +51,17 @@ try {
         for (let i = 0; i < response[0].length; i++) {
           responseText += response[0][i][0];
         }
-
         // Hoàn thành dịch và hiển thị kết quả ra màn hình
         let divTranslate = $("#stpham-translate");
         let divTranslateText = $("#stpham-translate-text");
+
         divTranslateText.text(responseText);
         divTranslate.show();
-        divTranslate.css({"top" : divTranslate.position().top, "bottom" : "auto"});
+
+        if (StphamTranslator.isShow === false) {
+          divTranslate.css({"top" : divTranslate.position().top, "bottom" : "auto"});
+          StphamTranslator.isShow = false;
+        }
       });
     },
 
@@ -70,7 +72,7 @@ try {
           let divTranslate = "<div id=\"stpham-translate\"> <div id=\"stpham-translate-text\"> </div> </div>";
           $("body").append(divTranslate);
           let element = $("#stpham-translate");
-          element.draggable({containment : "window"});
+          element.draggable();
           element.resizable();
           element.hide();
         } else {
