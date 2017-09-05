@@ -5,9 +5,9 @@
   "author": "Stpham, Inc.",
   "homepage_url": "https://www.stpham.net/",
   "icons": {
-    "16": "icon_true.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "icons/icon_true.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "background": {
     "scripts": [
@@ -17,12 +17,12 @@
   "content_scripts": [
     {
       "css": [
-        "jquery-ui.min.css",
-        "style.css"
+        "css/jquery-ui.min.css",
+        "css/style.css"
       ],
       "js": [
-        "jquery.min.js",
-        "jquery-ui.min.js",
+        "js/jquery.min.js",
+        "js/jquery-ui.min.js",
         "main.js"
       ],
       "matches": [

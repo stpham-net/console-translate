@@ -15,8 +15,8 @@ chrome.browserAction.onClicked.addListener(function (tab) {
   var extensionStatus = (localStorage.getItem("extensionStatus") === "true") ? "false" : "true";
   chrome.tabs.sendMessage(tab.id, extensionStatus);
   localStorage.setItem("extensionStatus", extensionStatus);
-  chrome.browserAction.setIcon({path : "icon_" + extensionStatus + ".png"});
+  chrome.browserAction.setIcon({path : "icons/icon_" + extensionStatus + ".png"});
 });
 
 // Tạo icon Bật-Tắt
-chrome.browserAction.setIcon({path : "icon_" + localStorage.getItem("extensionStatus") + ".png"});
+chrome.browserAction.setIcon({path : "icons/icon_" + localStorage.getItem("extensionStatus") + ".png"});
