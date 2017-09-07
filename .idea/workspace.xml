@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="538fc134-ccdd-4c4b-bb71-a510875f8ca3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/background.js" afterPath="$PROJECT_DIR$/background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_glass_20_555555_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_glass_40_0078a3_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_glass_40_ffc73d_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_gloss-wave_25_333333_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_inset-soft_25_000000_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_inset-soft_30_f58400_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_4b8e0b_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_a83300_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_cccccc_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_ffffff_256x240.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -44,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/content.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="454">
-              <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+              <caret line="88" column="33" lean-forward="false" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
               <folding>
                 <element signature="e#1556#2457#0" expanded="false" />
                 <element signature="e#3369#3843#0" expanded="false" />
@@ -58,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/background.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -240,12 +247,12 @@
       <workItem from="1504483992275" duration="2221000" />
       <workItem from="1504575928606" duration="16894000" />
       <workItem from="1504601820981" duration="569000" />
-      <workItem from="1504814767018" duration="5081000" />
+      <workItem from="1504814767018" duration="5193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60482000" />
+    <option name="totallyTimeSpent" value="60594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1683" height="1096" extended-state="6" />
@@ -590,7 +597,7 @@
     <entry file="file://$PROJECT_DIR$/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -598,7 +605,7 @@
     <entry file="file://$PROJECT_DIR$/content.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
-          <caret line="88" column="33" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+          <caret line="88" column="33" lean-forward="false" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
           <folding>
             <element signature="e#1556#2457#0" expanded="false" />
             <element signature="e#3369#3843#0" expanded="false" />
@@ -610,7 +617,7 @@
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
       </provider>
