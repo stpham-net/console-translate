@@ -4,6 +4,7 @@ try {
     extensionStatus : null,
     lastText        : "",
     isShow          : false,
+    isElement       : false,
 
     // Khởi tạo chương trình dịch
     init() {
@@ -14,7 +15,7 @@ try {
         StphamTranslator.initDivElement();
       });
 
-      // Bật-Tắt tiện ích khi bấm vào icon
+      // Bật-Tắt tiện ích từ background
       chrome.runtime.onMessage.addListener(function (sendResponse) {
         StphamTranslator.extensionStatus = (sendResponse === "true");
         StphamTranslator.initDivElement();
@@ -22,6 +23,14 @@ try {
 
       // Lắng nghe hành động nhả chuột phải
       document.addEventListener("mouseup", StphamTranslator.mouseupAction);
+
+      // Bấm phím tắt F4
+      document.addEventListener("keyup", function (e) {
+        let keyCode = e.keyCode;
+        if (keyCode === 115) {
+          chrome.runtime.sendMessage("hotkey");
+        }
+      });
 
     },
 
@@ -60,7 +69,7 @@ try {
 
         if (StphamTranslator.isShow === false) {
           divTranslate.css({"top" : divTranslate.position().top, "bottom" : "auto"});
-          StphamTranslator.isShow = false;
+          StphamTranslator.isShow = true;
         }
       });
     },
@@ -68,15 +77,19 @@ try {
     // Tạo Div
     initDivElement() {
       $(function () {
-        if (StphamTranslator.extensionStatus === true) {
+        if (StphamTranslator.extensionStatus === true && StphamTranslator.isElement === false) {
           let divTranslate = "<div id=\"stpham-translate\"> <div id=\"stpham-translate-text\"> </div> </div>";
           $("body").append(divTranslate);
           let element = $("#stpham-translate");
+          console.log("element => ", element);
           element.draggable();
           element.resizable();
           element.hide();
+          StphamTranslator.isElement = true;
+          StphamTranslator.run();
         } else {
           $("#stpham-translate").remove();
+          StphamTranslator.isElement = false;
         }
       });
     },

@@ -1,6 +1,6 @@
 {
   "name": "Console Translate",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Console Translate by Stpham",
   "author": "Stpham, Inc.",
   "homepage_url": "https://www.stpham.net/",
@@ -17,13 +17,12 @@
   "content_scripts": [
     {
       "css": [
-        "css/jquery-ui.min.css",
         "css/style.css"
       ],
       "js": [
         "js/jquery.min.js",
         "js/jquery-ui.min.js",
-        "main.js"
+        "content.js"
       ],
       "matches": [
         "http://*/*",

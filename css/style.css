@@ -29,3 +29,77 @@
     color: white !important;
     white-space: pre-line;
 }
+
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0px;
+    height: 100%;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    touch-action: none;
+}
+
+.ui-resizable {
+    position: relative;
+}
+
+.ui-draggable-handle {
+    touch-action: none;
+}
+
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0px;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    touch-action: none;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url(chrome-extension://kkkpicmepahhllaifdibekjemkmnpnmm/images/resizable.png);
+    background-position: center;
+}
+
+.ui-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    display: block;
+    touch-action: none;
+}
+
+.ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -0.25em;
+    position: absolute;
+    text-indent: -99999px;
+    overflow: hidden;
+}
+
+
