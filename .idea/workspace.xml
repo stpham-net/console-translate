@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="538fc134-ccdd-4c4b-bb71-a510875f8ca3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_glass_20_555555_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_glass_40_0078a3_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_glass_40_ffc73d_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_gloss-wave_25_333333_500x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_inset-soft_25_000000_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-bg_inset-soft_30_f58400_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_4b8e0b_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_a83300_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_cccccc_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manifest.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
@@ -37,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="72" column="32" lean-forward="false" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+            <state relative-caret-position="475">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -109,11 +98,11 @@
         <option value="$PROJECT_DIR$/extension_2015_4_24/script.js" />
         <option value="$PROJECT_DIR$/select-like-a-boss.js" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/background.js" />
         <option value="$PROJECT_DIR$/content.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -247,12 +236,12 @@
       <workItem from="1504483992275" duration="2221000" />
       <workItem from="1504575928606" duration="16894000" />
       <workItem from="1504601820981" duration="569000" />
-      <workItem from="1504814767018" duration="5193000" />
+      <workItem from="1504814767018" duration="5300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60594000" />
+    <option name="totallyTimeSpent" value="60701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1683" height="1096" extended-state="6" />
@@ -586,18 +575,18 @@
     <entry file="file://$PROJECT_DIR$/extension_2015_4_24/script.js" />
     <entry file="file://$PROJECT_DIR$/select-like-a-boss.js" />
     <entry file="file://$PROJECT_DIR$/style.css" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="72" column="32" lean-forward="false" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="18" column="3" lean-forward="false" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -614,10 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="475">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
           <folding />
         </state>
       </provider>
