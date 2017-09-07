@@ -2,7 +2,6 @@ try {
   StphamTranslator = {
 
     extensionStatus : null,
-    lastText        : "",
     isShow          : false,
     isElement       : false,
 
@@ -40,11 +39,9 @@ try {
         // Kiểm tra bôi đen
         let selectionText = StphamTranslator.getSelectionText();
         if (selectionText !== "") {
+          console.log("Run Stpham Translate");
           let foreignText = selectionText.replace(/^\s*/, "").replace(/\s*$/, "");
-          if (StphamTranslator.lastText !== foreignText) {
-            StphamTranslator.translate(foreignText);
-            StphamTranslator.lastText = foreignText;
-          }
+          StphamTranslator.translate(foreignText);
         }
       }
     },
@@ -81,13 +78,13 @@ try {
           let divTranslate = "<div id=\"stpham-translate\"> <div id=\"stpham-translate-text\"> </div> </div>";
           $("body").append(divTranslate);
           let element = $("#stpham-translate");
-          console.log("element => ", element);
           element.draggable();
           element.resizable();
           element.hide();
           StphamTranslator.isElement = true;
           StphamTranslator.run();
         } else {
+          console.log("Disable Stpham Translate");
           $("#stpham-translate").remove();
           StphamTranslator.isElement = false;
         }
