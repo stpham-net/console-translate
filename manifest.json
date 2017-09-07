@@ -36,8 +36,5 @@
   "browser_action": {
     "default_title": "Console Translate"
   },
-  "manifest_version": 2,
-  "web_accessible_resources": [
-    "font/*"
-  ]
+  "manifest_version": 2
 }
