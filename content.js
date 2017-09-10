@@ -1,13 +1,14 @@
+//'use strict';
 try {
   StphamTranslator = {
-
     extensionStatus : null,
     isShow          : false,
     isElement       : false,
 
-    // Khởi tạo chương trình dịch
+    /**
+     * Khởi tạo tiện ích dịch
+     */
     init() {
-
       // Bật-Tắt tiện ích khi khởi động
       chrome.runtime.sendMessage("getExtensionStatus", function (response) {
         StphamTranslator.extensionStatus = (response === "true");
@@ -33,7 +34,9 @@ try {
 
     },
 
-    // Chạy tiện ích
+    /**
+     * Chạy tiện ích dịch
+     */
     run() {
       if (StphamTranslator.extensionStatus === true) {
         // Kiểm tra bôi đen
@@ -46,7 +49,10 @@ try {
       }
     },
 
-    // Thực hiện dịch
+    /**
+     * Thực hiện dịch
+     * @param foreignText - Nội dung muốn dịch
+     */
     translate(foreignText) {
       let url = "https://translate.googleapis.com/translate_a/single";
       let param = "sl=auto&tl=vi&dt=t&q=" + encodeURIComponent(foreignText);
@@ -60,10 +66,9 @@ try {
         // Hoàn thành dịch và hiển thị kết quả ra màn hình
         let divTranslate = $("#stpham-translate");
         let divTranslateText = $("#stpham-translate-text");
-
         divTranslateText.text(responseText);
         divTranslate.show();
-
+        // Kiểm tra hiển thị
         if (StphamTranslator.isShow === false) {
           divTranslate.css({"top" : divTranslate.position().top, "bottom" : "auto"});
           StphamTranslator.isShow = true;
@@ -71,7 +76,9 @@ try {
       });
     },
 
-    // Tạo Div
+    /**
+     * Khởi tạo thẻ DIV
+     */
     initDivElement() {
       $(function () {
         if (StphamTranslator.extensionStatus === true && StphamTranslator.isElement === false) {
@@ -91,14 +98,20 @@ try {
       });
     },
 
-    // Lắng nghe hành động nhả chuột phải
+    /**
+     * Hành động khi bắt được mouseup
+     * @param event
+     */
     mouseupAction(event) {
       if (event.which !== 3) {
         StphamTranslator.run();
       }
     },
 
-    // Lấy chữ của đoạn bôi đen
+    /**
+     * Lấy nội dung đoạn chữ bôi đen
+     * @returns {string} - Trả về đoạn chữ được tinh chỉnh
+     */
     getSelectionText() {
       let text = "";
       let activeEl = document.activeElement;
@@ -112,7 +125,11 @@ try {
       return text;
     },
 
-    // Load Ajax
+    /**
+     * Tải Ajax
+     * @param url
+     * @returns {Promise} - Trả về kết quả html
+     */
     loadAjax(url) {
       "use strict";
       let xhr = new XMLHttpRequest();
@@ -131,12 +148,9 @@ try {
       });
     }
 
-    // Cuối Object
   };
 } catch (e) {
-  // Làm gì đó
 }
 
-// Kích hoạt chức năng
 StphamTranslator.init();
 
