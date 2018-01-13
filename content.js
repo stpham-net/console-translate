@@ -67,9 +67,9 @@ try {
         let divTranslate = $("#stpham-translate");
         let divTranslateText = $("#stpham-translate-text");
         divTranslateText.text(responseText);
-        divTranslate.show();
         // Kiểm tra hiển thị
         if (StphamTranslator.isShow === false) {
+		  divTranslate.show();
           divTranslate.css({"top" : divTranslate.position().top, "bottom" : "auto"});
           StphamTranslator.isShow = true;
         }
@@ -83,7 +83,18 @@ try {
       $(function () {
         if (StphamTranslator.extensionStatus === true && StphamTranslator.isElement === false) {
           let divTranslate = "<div id=\"stpham-translate\"> <div id=\"stpham-translate-text\"> </div> </div>";
+          let aFixedButton = "<a id=\"fixedbutton\"><strong data-text=\"🌎\"></strong></a>";
           $("body").append(divTranslate);
+          $("body").append(aFixedButton);
+		  
+		  $('#fixedbutton').click(function(){
+		    if ( $("#stpham-translate").is(":visible") ) { 
+		  	$("#stpham-translate").hide(); 
+		    } else if ( $("#stpham-translate").is(":hidden") ) { 
+		  	$("#stpham-translate").show(); 
+		    }
+		  })
+		  
           let element = $("#stpham-translate");
           element.draggable();
           element.resizable();
@@ -93,7 +104,9 @@ try {
         } else {
           console.log("Disable Stpham Translate");
           $("#stpham-translate").remove();
+          $("#fixedbutton").remove();
           StphamTranslator.isElement = false;
+		  StphamTranslator.isShow = false;
         }
       });
     },
